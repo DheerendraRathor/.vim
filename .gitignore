@@ -1,0 +1,6 @@
+# Don't track backup and swp
+backup/
+swp/
+
+# Don't track plugged directory created by plug.vim
+plugged/
