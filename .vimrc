@@ -1,8 +1,14 @@
 set hidden
-set tabstop=2 shiftwidth=2 expandtab
+set tabstop=4 shiftwidth=4 expandtab
+
+" Let backspace/delete work
 set backspace=2
 set backspace=indent,eol,start
+
+" Keep track of open buffers in viminfo
 set viminfo^=%
+
+" Backup/Swap options
 set noundofile
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swp//
