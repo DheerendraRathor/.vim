@@ -16,7 +16,6 @@ set directory=~/.vim/swp//
 " Load Plugins using Plug.vim
 call plug#begin('~/.vim/plugged')
 
-Plug 'junegunn/vim-easy-align'
 Plug 'othree/xml.vim', {'for': 'xml'}
 
 Plug 'scrooloose/nerdtree'
