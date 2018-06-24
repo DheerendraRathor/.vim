@@ -1,5 +1,6 @@
 set hidden
 set tabstop=4 shiftwidth=4 expandtab
+set number
 
 " Let backspace/delete work
 set backspace=2
@@ -25,6 +26,8 @@ Plug 'pangloss/vim-javascript'
 
 Plug 'vim-airline/vim-airline'
 
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 "  Airline customiations
