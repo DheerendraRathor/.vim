@@ -4,3 +4,6 @@ swp/
 
 # Don't track plugged directory created by plug.vim
 plugged/
+
+# Don't keep sessions in git
+sessions/
