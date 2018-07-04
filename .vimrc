@@ -3,6 +3,17 @@ set tabstop=4 shiftwidth=4 expandtab
 set number
 set relativenumber
 set updatetime=100
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<
+set ignorecase
+set hlsearch
+set formatoptions+=j " Delete comment character when joining commented lines
+set display+=lastline
+set wildmenu
+set complete-=i
+set smarttab
+set laststatus=2
+set incsearch
+filetype plugin indent on
 
 " Let backspace/delete work
 set backspace=2
@@ -26,12 +37,14 @@ Plug 'pangloss/vim-javascript'
 Plug 'vim-airline/vim-airline'
 
 Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
 
 Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'xolox/vim-session'
 Plug 'xolox/vim-misc'
+
+" Google stuff
+Plug 'google/vim-searchindex'
 call plug#end()
 
 "  Airline customiations
@@ -46,7 +59,9 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Customizations
-:let mapleader = " "
+let mapleader = " "
+
+nnoremap <Leader><space> :noh<CR>
 
 " Window navigation
 nmap <Leader>wl <C-w>l
@@ -71,7 +86,7 @@ nmap <Leader>bp :b#<CR>
 nmap <Leader>bq :bp <BAR> bd #<CR>
 
 " Vim session configurations
-set sessionoptions-=blank
+set sessionoptions-=blank,options
 let g:session_directory='~/.vim/sessions'
 let g:session_autoload='yes'
 let g:session_autosave='yes'
