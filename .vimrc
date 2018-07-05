@@ -63,6 +63,10 @@ let mapleader = " "
 
 nnoremap <Leader><space> :noh<CR>
 
+"Quick file navigation
+nmap <Leader>cdf :lcd %:p:h<CR>
+nmap <Leader>vrc :e ~/.vim/.vimrc<CR>
+
 " Window navigation
 nmap <Leader>wl <C-w>l
 nmap <Leader>wh <C-w>h
@@ -100,3 +104,10 @@ nnoremap <Leader>ds :DeleteSession<Space>
 " NERDTree
 nnoremap <Leader>nt :NERDTreeToggle<CR>
 nnoremap <Leader>f :NERDTreeFind<CR>
+
+" Wildignore
+set wildignore+=*.exe,*.zip,*/objd/**,*/obj/**,*.tmp
+
+let g:ctrlp_custom_ignore = {
+    \ 'dir': '\v[\/]\.git$'
+\ }
