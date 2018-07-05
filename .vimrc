@@ -3,7 +3,7 @@ set tabstop=4 shiftwidth=4 expandtab
 set number
 set relativenumber
 set updatetime=100
-set listchars=eol:Â¬,tab:>Â·,trail:~,extends:>,precedes:<
+set listchars=eol:¶,tab:»\ ,trail:~,extends:>,precedes:<,nbsp:‡
 set ignorecase
 set hlsearch
 set formatoptions+=j " Delete comment character when joining commented lines
