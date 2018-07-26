@@ -43,6 +43,9 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'xolox/vim-session'
 Plug 'xolox/vim-misc'
 
+" Vim-scripts
+Plug 'vim-scripts/BufOnly.vim'
+
 " Google stuff
 Plug 'google/vim-searchindex'
 call plug#end()
