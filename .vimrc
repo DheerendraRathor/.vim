@@ -43,6 +43,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'xolox/vim-session'
 Plug 'xolox/vim-misc'
 
+Plug 'wellle/targets.vim'
+
 " Vim-scripts
 Plug 'vim-scripts/BufOnly.vim'
 
