@@ -3,7 +3,7 @@ set tabstop=4 shiftwidth=4 expandtab
 set number
 set relativenumber
 set updatetime=100
-set listchars=eol:¶,tab:»\ ,trail:~,extends:>,precedes:<,nbsp:‡
+" set listchars=eol:¶,tab:»\ ,trail:~,extends:>,precedes:<,nbsp:‡
 set ignorecase
 set hlsearch
 set formatoptions+=j " Delete comment character when joining commented lines
@@ -13,6 +13,7 @@ set complete-=i
 set smarttab
 set laststatus=2
 set incsearch
+set autoindent
 filetype plugin indent on
 
 " Let backspace/delete work
@@ -31,8 +32,6 @@ Plug 'othree/xml.vim', {'for': 'xml'}
 
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-
-Plug 'pangloss/vim-javascript'
 
 Plug 'vim-airline/vim-airline'
 
@@ -69,7 +68,9 @@ let mapleader = " "
 nnoremap <Leader><space> :noh<CR>
 
 "Quick file navigation
+" Change to current file directory
 nmap <Leader>cdf :lcd %:p:h<CR>
+" Open vim rc
 nmap <Leader>vrc :e ~/.vim/.vimrc<CR>
 
 " Window navigation
@@ -111,8 +112,13 @@ nnoremap <Leader>nt :NERDTreeToggle<CR>
 nnoremap <Leader>f :NERDTreeFind<CR>
 
 " Wildignore
-set wildignore+=*.exe,*.zip,*/objd/**,*/obj/**,*.tmp
+set wildignore+=*.swp,*.zip
+set wildignore+=*.exe,*/objd/**,*/obj/**,*.tmp
+set wildignore+=*.so
 
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_show_hidden = 1
 let g:ctrlp_custom_ignore = {
-    \ 'dir': '\v[\/]\.git$'
+    \ 'dir': '\v[\/]\.git$',
+    \ 'file': '\v\.(exe|so|dll)$',
 \ }
